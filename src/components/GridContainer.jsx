@@ -2,16 +2,12 @@ import { Row, Col } from "antd";
 import "./GridContainer.css";
 import { items } from "../utils/items";
 import { GridItem } from "./GridItem";
-import { TotalContext } from '../App';
-import { useContext } from "react";
 
 export const GridContainer = () => {
-
-  const [totalCountItem] = useContext(TotalContext)
   
   return (
     <>
-      <Row className="gridContainer-row" gutter={[24, 24]}>
+      <Row className="gridContainer-row" gutter={{ xs: [8, 8], sm: [16, 16], md: [24, 24], lg: [24, 24] }}>
         {items.map((item) => (
           <Col
             xs={12}
@@ -27,7 +23,6 @@ export const GridContainer = () => {
           </Col>
         ))}
       </Row>
-      <p>{totalCountItem}</p>
     </>
   );
 };

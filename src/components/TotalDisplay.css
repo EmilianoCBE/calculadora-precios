@@ -1,0 +1,30 @@
+h4 {
+  font-weight: 400;
+}
+
+.totalDisplay-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 250px;
+  padding: 32px;
+  background-color: #F9F9F9;
+
+  h4, p {
+    margin: 0;
+  }
+
+}
+
+.totalDisplay-card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalDisplay-card-item:nth-child(5),
+.totalDisplay-card-item:nth-child(6) {
+  h4, p {
+    font-weight: 700;
+  }
+}
