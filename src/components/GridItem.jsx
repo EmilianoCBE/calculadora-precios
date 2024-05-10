@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import './GridItem.css';
 
-export const GridItem = ({name, icon, price}) => {
+export const GridItem = ({name, icon, price, handleSubractTotal, handleSumTotal, totalCountItem}) => {
 
   const [count, setCount] = useState(0)
 
-  const handleSum = () => setCount(count + 1)
+  const handleSum = () => {
+    setCount(count + 1)
+    handleSumTotal(totalCountItem)
+  }
+
   const handleSubract = () => {
     if(count > 0) {
       setCount(count - 1)
     }
+    handleSubractTotal(totalCountItem)
   }
 
   return (
