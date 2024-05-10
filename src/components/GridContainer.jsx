@@ -2,18 +2,13 @@ import { Row, Col } from "antd";
 import "./GridContainer.css";
 import { items } from "../utils/items";
 import { GridItem } from "./GridItem";
-import { useState } from "react";
+import { TotalContext } from '../App';
+import { useContext } from "react";
 
 export const GridContainer = () => {
-  const [totalCountItem, setTotalCountItem] = useState(0);
 
-  const handleSumtTotal = () => setTotalCountItem(totalCountItem + 1);
-  const handleSubractTotal = () => {
-    if (totalCountItem > 0) {
-      setTotalCountItem(totalCountItem - 1);
-    }
-  };
-
+  const [totalCountItem] = useContext(TotalContext)
+  
   return (
     <>
       <Row className="gridContainer-row" gutter={[24, 24]}>
@@ -28,7 +23,7 @@ export const GridContainer = () => {
             key={item.id}
             className="gridContainer-col"
           >
-            <GridItem {...item} handleSubractTotal={handleSubractTotal} handleSumtTotal={handleSumtTotal} totalCountItem={totalCountItem} />
+            <GridItem {...item} />
           </Col>
         ))}
       </Row>
