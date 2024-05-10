@@ -1,15 +1,16 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import './GridItem.css';
 import { TotalContext } from '../App';
 
-export const GridItem = ({name, icon}) => {
+export const GridItem = ({name, icon, meters}) => {
 
   const [count, setCount] = useState(0)
-  const [totalCountItem, setTotalCountItem] = useContext(TotalContext)
+  const {totalCountItem, setTotalCountItem, setTotalMeters, totalMeters} = useContext(TotalContext)
 
   const handleSum = () => {
     setCount(count + 1)
     setTotalCountItem(totalCountItem + 1)
+    setTotalMeters(totalMeters + meters)
   }
 
   const handleSubract = () => {
@@ -18,6 +19,7 @@ export const GridItem = ({name, icon}) => {
     }
     if(totalCountItem > 0) {
       setTotalCountItem(totalCountItem - 1)
+      setTotalMeters(totalMeters - meters)
     }
   }
 

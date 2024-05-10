@@ -1,9 +1,12 @@
 import { Row, Col } from "antd";
 import "./GridContainer.css";
-import { items } from "../utils/items";
 import { GridItem } from "./GridItem";
+import { useContext } from "react";
+import { TotalContext } from "../App";
 
 export const GridContainer = () => {
+
+  const {items} = useContext(TotalContext)
   
   return (
     <>

@@ -4,7 +4,7 @@ import './TotalDisplay.css'
 
 export const TotalDisplay = () => {
 
-  const [totalCountItem] = useContext(TotalContext)
+  const {totalCountItem, totalMeters} = useContext(TotalContext)
 
   return (
     <>
@@ -16,7 +16,7 @@ export const TotalDisplay = () => {
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Total m2</h4>
-          <p>{totalCountItem}</p>
+          <p>{totalMeters}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Subtotal</h4>
