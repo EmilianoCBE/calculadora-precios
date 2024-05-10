@@ -6,6 +6,14 @@ export const TotalDisplay = () => {
 
   const {totalCountItem, totalMeters} = useContext(TotalContext)
 
+  const subtotal = totalMeters * 200
+
+  const tax = subtotal * 0.16
+
+  const total = subtotal + tax
+
+  const totalDueToday = total * 0.5
+
   return (
     <>
       <h2>Summary</h2>
@@ -20,19 +28,19 @@ export const TotalDisplay = () => {
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Subtotal</h4>
-          <p>{totalCountItem}</p>
+          <p>$ {subtotal}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Tax</h4>
-          <p>{totalCountItem}</p>
+          <p>$ {tax}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Total</h4>
-          <p>{totalCountItem}</p>
+          <p>$ {total}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Due today 50%</h4>
-          <p>{totalCountItem}</p>
+          <p>$ {totalDueToday}</p>
         </div>
       </div>
     </>
