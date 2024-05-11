@@ -12,7 +12,7 @@ export const ClearButton = () => {
   }
 
   return (
-    <div className="clearButton-button">
+    <div className="clearButton-container">
       <button onClick={handleClear}>
         Clear
       </button>

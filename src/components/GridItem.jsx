@@ -7,6 +7,12 @@ export const GridItem = ({name, icon, meters}) => {
   const [count, setCount] = useState(0)
   const {totalCountItem, setTotalCountItem, setTotalMeters, totalMeters} = useContext(TotalContext)
 
+  useEffect(() => {
+    if(totalCountItem == 0){
+      setCount(0)
+    }
+  }, [totalCountItem])
+
   const handleSum = () => {
     setCount(count + 1)
     setTotalCountItem(totalCountItem + 1)
