@@ -1,6 +1,6 @@
 import './App.css'
 import { Content } from './components/Content'
-// import { Footer } from './components/Footer'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { useState, createContext } from "react"
 import { items } from "./utils/items";
@@ -23,7 +23,7 @@ function App() {
     >
       <Header />
       <Content />
-      {/* <Footer /> */}
+      <Footer />
     </TotalContext.Provider>
   )
 }

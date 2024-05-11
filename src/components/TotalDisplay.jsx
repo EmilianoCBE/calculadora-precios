@@ -24,23 +24,23 @@ export const TotalDisplay = () => {
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Total m2</h4>
-          <p>{totalMeters}</p>
+          <p>{totalMeters.toFixed(2)}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Subtotal</h4>
-          <p>$ {subtotal}</p>
+          <p>$ {subtotal.toFixed(2)}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Tax</h4>
-          <p>$ {tax}</p>
+          <p>$ {tax.toFixed(2)}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Total</h4>
-          <p>$ {total}</p>
+          <p>$ {total.toFixed(2)}</p>
         </div>
         <div className='totalDisplay-card-item'>
           <h4>Due today 50%</h4>
-          <p>$ {totalDueToday}</p>
+          <p>$ {totalDueToday.toFixed(2)}</p>
         </div>
       </div>
     </>
