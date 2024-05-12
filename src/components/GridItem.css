@@ -86,7 +86,7 @@ button {
 
   .gridItem-count-minus.disabled {
     color: #BDBDBD !important; 
-    pointer-events: none !important;
+    /* pointer-events: none !important; */
   }
 
   .gridItem-count-plus {

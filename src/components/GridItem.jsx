@@ -25,7 +25,7 @@ export const GridItem = ({name, icon, meters}) => {
     if(count > 0) {
       setCount(count - 1)
     }
-    if(totalCountItem > 0) {
+    if(totalCountItem > 0 && count > 0) {
       setTotalCountItem(totalCountItem - 1)
       setTotalMeters(totalMeters - meters)
     }
