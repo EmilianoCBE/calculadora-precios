@@ -84,6 +84,10 @@ button {
     border-radius: 3px 0 0 3px;
   }
 
+  .gridItem-count-minus.disabled {
+    color: #BDBDBD !important; 
+    pointer-events: none !important;
+  }
 
   .gridItem-count-plus {
     border-radius: 0 3px 3px 0;

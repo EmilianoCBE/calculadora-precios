@@ -7,6 +7,8 @@ export const GridItem = ({name, icon, meters}) => {
   const [count, setCount] = useState(0)
   const {totalCountItem, setTotalCountItem, setTotalMeters, totalMeters} = useContext(TotalContext)
 
+  const buttonDisabled = count === 0 ? 'disabled' : ''
+
   useEffect(() => {
     if(totalCountItem == 0){
       setCount(0)
@@ -37,7 +39,7 @@ export const GridItem = ({name, icon, meters}) => {
           <p>{name}</p>
         </div>
         <div className="gridItem-count">
-          <button className="gridItem-count-minus" onClick={handleSubract}>
+          <button className={`gridItem-count-minus ${buttonDisabled}`} onClick={handleSubract}>
             -
           </button>
           <div className="gridItem-count-display">
