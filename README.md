@@ -1,9 +1,6 @@
-# React + Vite
+# Calculadora de precios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto te calcula el precio total de los muebles a comprar en tiempo real.
+L suma se hace en automático de los items a comprar y el precio es la multipicación de metro cuadrado por $200
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# calculadora-precios
+[@vitejs/plugin-react-swc](https://github.com/emilianocbe/calculadora-precios/raw/main/assets/cover.png)
